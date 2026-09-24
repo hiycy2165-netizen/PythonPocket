@@ -1,0 +1,27 @@
+name: PythonPocket APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Projeyi al
+        uses: actions/checkout@v4
+
+      - name: APK oluştur
+        uses: ArtemSBulgakov/buildozer-action@v1
+        with:
+          workdir: .
+          command: buildozer android debug
+
+      - name: APK'yı yükle
+        uses: actions/upload-artifact@v4
+        with:
+          name: PythonPocket-APK
+          path: bin/*.apk
