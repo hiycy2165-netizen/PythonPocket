@@ -1,4 +1,4 @@
-name: PythonPocket APK
+PythonPocket APK
 
 on:
   workflow_dispatch:
