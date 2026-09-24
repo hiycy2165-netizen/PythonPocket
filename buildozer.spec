@@ -4,9 +4,11 @@
 title = PythonPocket IDE
 package.name = pythonpocket
 package.domain = org.pythonpocket
+
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas,txt
 source.main = main.py
+
 version = 1.0
 
 requirements = python3,kivy,pygments
@@ -16,7 +18,7 @@ fullscreen = 0
 
 android.api = 35
 android.minapi = 23
-android.arch = arm64-v8a
+android.archs = arm64-v8a
 android.enable_androidx = True
 android.private_storage = True
 
